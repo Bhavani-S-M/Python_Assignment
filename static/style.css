@@ -1,39 +1,73 @@
 body {
-    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    margin: 0;
+    padding: 20px;
 }
 
-.navbar {
-    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+h1, h2 {
+    color: #2c3e50;
 }
 
-.card {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+form {
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+input[type="text"],
+input[type="file"],
+input[name],
+button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
     border: none;
-    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-.card-header {
-    border-radius: 0.5rem 0.5rem 0 0 !important;
+button:hover {
+    background-color: #2980b9;
 }
 
-.table th {
-    border-top: none;
+ul {
+    list-style: none;
+    padding: 0;
 }
 
-.btn {
-    padding: 0.375rem 0.75rem;
-    font-size: 0.875rem;
+li {
+    background: #ecf0f1;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.table-responsive {
-    border-radius: 0.5rem;
-    overflow: hidden;
+li form {
+    display: inline;
 }
 
-.table-hover tbody tr:hover {
-    background-color: rgba(0, 0, 0, 0.03);
-}
-
-footer {
-    box-shadow: 0 -2px 4px rgba(0,0,0,.1);
+.section {
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 2px solid #ccc;
 }
