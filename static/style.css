@@ -1,73 +1,138 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f9fc;
-    color: #333;
+* {
+    box-sizing: border-box;
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
 
-h1, h2 {
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
     color: #2c3e50;
+    min-height: 100vh;
+    padding: 40px;
 }
 
 .container {
-    max-width: 800px;
-    margin: auto;
-    background: #fff;
+    max-width: 100%;
+    margin: 0 auto;
+    background: #b1adad;
     padding: 30px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    color: #1e11d4;
+    margin-bottom: 30px;
 }
 
 form {
-    margin: 15px 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
+    margin-bottom: 20px;
+    justify-content: center;
 }
 
 input[type="text"],
 input[type="file"],
-input[name],
-button {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+input[name] {
+    flex: 1 1 300px;
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ebe3e3;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #f38021;
+    box-shadow: 0 0 6px #f38021;
+    outline: none;
 }
 
 button {
-    background-color: #3498db;
-    color: white;
+    background-color: #c46710;
+    color: #0e0d0d;
+    padding: 12px 18px;
     border: none;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: 0.3s;
+    font-weight: 500;
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #1976d2;
+}
+
+.bucket-name-btn {
+    background-color: #f0f5f0;  /* Green background */
+    color: rgb(5, 5, 5);               /* White text */
+    font-weight: bold;
+    padding: 0px 0px;
+    font-size: 26px; 
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bucket-name-btn:hover {
+    background-color: #e3ebe3;
 }
 
 ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
 li {
-    background: #ecf0f1;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
+    background-color: #f1f8ff;
+    border: 1px solid #9790f9;
+    padding: 15px 20px;
+    margin: 10px auto;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 800px;
+    transition: 0.2s;
 }
 
-li form {
-    display: inline;
+li:hover {
+    background-color: #e3f2fd;
 }
 
 .section {
-    margin-top: 30px;
-    padding-top: 10px;
-    border-top: 2px solid #ccc;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 2px solid #bbdefb;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 1.8em;
+    color: #1520c0;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    button,
+    input {
+        width: 100%;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
 }

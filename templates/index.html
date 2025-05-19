@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>S3 File Manager</h1>
+    <h1>S3 Buckets</h1>
 
     <!-- Create Bucket -->
     <form action="/create_bucket" method="post">
@@ -21,7 +21,8 @@
             <div>
                 <form action="/list_objects" method="post" style="display:inline">
                     <input type="hidden" name="bucket_name" value="{{ bucket.Name }}">
-                    <button type="submit">{{ bucket.Name }}</button>
+                    <button class="bucket-name-btn" type="submit" name="bucket" value="project-demo-bucket">{{ bucket.Name }}</button>
+
                 </form>
             </div>
             <form action="/delete_bucket" method="post">

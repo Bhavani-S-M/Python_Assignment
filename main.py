@@ -4,6 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import boto3
 import os
+from fastapi import Request
 from botocore.exceptions import ClientError
 import config  # Import your config.py file
 
